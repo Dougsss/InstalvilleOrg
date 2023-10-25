@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* CSS Reset */
 * {
   margin: 0;
@@ -6,13 +10,13 @@
   outline: 0;
   font-size: 100%;
   vertical-align: baseline;
-  background:  #333333;
-  color: #FFFFFF;
+  background:  transparent;
   font-family: sans-serif;
 }
 
 body {
   line-height: 1;
+  background:  #333333;
 }
 
 ol, ul {
