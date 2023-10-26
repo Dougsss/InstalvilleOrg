@@ -1,9 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Header from '../../components/header/Header';
+
+import FormsCadastro from '../FormsCadastro/FormsCadastro';
 import Button from '../../components/button/button';
 import Input from '../../components/input/input';
 
 const Clientes = () => {
+    const [modalOpen, setModalOpen] = useState(false);
+
+    // Função para abrir o modal
+    const openModal = () => {
+        setModalOpen(true);
+    };
+    // Função para fechar o modal
+    const closeModal = () => {
+        setModalOpen(false);
+    };
     return (
         <>
             <Header />
@@ -11,7 +23,9 @@ const Clientes = () => {
                 <Input 
                     placeholder="Procure um Cliente..."
                 />
-                <Button text="Adicione Novo" />
+                <Button text="Adicione Novo" onClick={openModal} />
+                {/* Vai renderizar o modal apenas quando modalOpen for true */}
+                {modalOpen && <FormsCadastro isOpen={modalOpen} closeModal={closeModal} />}
             </div>
             <div className="flex m-4 gap-2">
                 <div className=" w-[60%] h-2/3 rounded-sm bg-zinc-100">
