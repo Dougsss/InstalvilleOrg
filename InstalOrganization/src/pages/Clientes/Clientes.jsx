@@ -1,12 +1,17 @@
 import React from 'react'
-import Header from '../../components/header/Header'
+import Header from '../../components/header/Header';
+import Button from '../../components/button/button';
+import Input from '../../components/input/input';
 
 const Clientes = () => {
     return (
         <>
             <Header />
-            <div className=" m-4 mt-6 p-2 rounded-sm w-auto h-10 bg-zinc-100">
-
+            <div className=" m-4 mt-6 p-2 rounded-sm w-auto h-12 bg-zinc-100 flex justify-between">
+                <Input 
+                    placeholder="Procure um Cliente..."
+                />
+                <Button text="Adicione Novo" />
             </div>
             <div className="flex m-4 gap-2">
                 <div className=" w-[60%] h-2/3 rounded-sm bg-zinc-100">
@@ -25,10 +30,20 @@ const Clientes = () => {
                                 <td className="p-2 border-solid border-x border-[#333333]">Pendant Publishing</td>
                                 <td className="p-2">publipendat12@gmail.com</td>
                             </tr>
+                            <tr className="border-solid border-b border-[#333333] bg-[#333333] text-white">
+                                <td className="p-2 border-solid border-x border-white">#101</td>
+                                <td className="p-2 border-solid border-x border-white">Kruger Industrial Smoothing</td>
+                                <td className="p-2 border-solid border-x border-white">krugersmoothing.1@hotmail.com</td>
+                            </tr>
                             <tr className="border-solid border-b border-[#333333]">
-                                <td className="p-2">#101</td>
-                                <td className="p-2 border-solid border-x border-[#333333]">Kruger Industrial Smoothing</td>
-                                <td className="p-2">krugersmoothing.1@hotmail.com</td>
+                                <td className="p-2">#102</td>
+                                <td className="p-2 border-solid border-x border-[#333333]">J. Peterman</td>
+                                <td className="p-2">comercialj.peter@jpcorporation.com</td>
+                            </tr>
+                            <tr className="border-solid border-b border-[#333333] bg-[#333333] text-white">
+                                <td className="p-2 border-solid border-x border-white">#101</td>
+                                <td className="p-2 border-solid border-x border-white">Kruger Industrial Smoothing</td>
+                                <td className="p-2 border-solid border-x border-white">krugersmoothing.1@hotmail.com</td>
                             </tr>
                             <tr className="border-solid border-b border-[#333333]">
                                 <td className="p-2">#102</td>
