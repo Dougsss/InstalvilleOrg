@@ -232,7 +232,7 @@ const FormsCadastro = ({ isOpen, closeModal }) => {
                 </div>
               )}
               <div className="text-center">
-                <Button text="Enviar" type="submit"/>
+                <Button text="Salvar" type="submit"/>
               </div>
             </form>
           </Transition.Child>
