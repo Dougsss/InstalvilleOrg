@@ -28,7 +28,7 @@ const Clientes = () => {
                 {modalOpen && <FormsCadastro isOpen={modalOpen} closeModal={closeModal} />}
             </div>
             <div className="flex m-4 gap-2">
-                <div className=" w-[60%] h-auto rounded-sm bg-zinc-100">
+                <div className=" w-[60%] h-full rounded-sm bg-zinc-100">
                     {/* Tenho que fazer essa planilha ser alimentada pelo BD */}
                     <table className="w-full">
                         <thead>
@@ -39,37 +39,22 @@ const Clientes = () => {
                             </tr>
                         </thead>
                         <tbody>
-                            <tr className="border-solid border-b border-[#333333]">
+                            <tr className="border-solid border-b border-[#494949] cursor-pointer">
                                 <td className="p-2">#100</td>
                                 <td className="p-2 border-solid border-x border-[#333333]">Pendant Publishing</td>
                                 <td className="p-2">publipendat12@gmail.com</td>
                             </tr>
-                            <tr className="border-solid border-b border-[#333333] bg-[#333333] text-white">
+                            <tr className="border-solid border-b border-[#494949] bg-[#333333] text-white cursor-pointer">
                                 <td className="p-2 border-solid border-x border-white">#101</td>
                                 <td className="p-2 border-solid border-x border-white">Kruger Industrial Smoothing</td>
                                 <td className="p-2 border-solid border-x border-white">krugersmoothing.1@hotmail.com</td>
-                            </tr>
-                            <tr className="border-solid border-b border-[#333333]">
-                                <td className="p-2">#102</td>
-                                <td className="p-2 border-solid border-x border-[#333333]">J. Peterman</td>
-                                <td className="p-2">comercialj.peter@jpcorporation.com</td>
-                            </tr>
-                            <tr className="border-solid border-b border-[#333333] bg-[#333333] text-white">
-                                <td className="p-2 border-solid border-x border-white">#101</td>
-                                <td className="p-2 border-solid border-x border-white">Kruger Industrial Smoothing</td>
-                                <td className="p-2 border-solid border-x border-white">krugersmoothing.1@hotmail.com</td>
-                            </tr>
-                            <tr className="border-solid border-b border-[#333333]">
-                                <td className="p-2">#102</td>
-                                <td className="p-2 border-solid border-x border-[#333333]">J. Peterman</td>
-                                <td className="p-2">comercialj.peter@jpcorporation.com</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
                 <div className=" w-[40%] h-full rounded-sm rounded-tl-lg border border-solid border-[#D06610] text-white">
                     <div className=" bg-[#D06610] font-medium mb-1 p-1 w-[15%] text-center rounded-br-lg rounded-tl-lg">ID</div>
-                    <div className=" m-5 "> 
+                    <div className=" m-5 mx-8 "> 
                         <div className="flex gap-2 my-2">
                             <h1 className="font-bold">Nome:</h1>
                             <p className=" font-extralight"> Joao da Silca</p>
