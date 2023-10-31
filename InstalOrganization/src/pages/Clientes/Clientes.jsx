@@ -55,36 +55,36 @@ const Clientes = () => {
                 <div className=" w-[40%] h-full rounded-sm rounded-tl-lg border border-solid border-[#D06610] text-white">
                     <div className=" bg-[#D06610] font-medium mb-1 p-1 w-[15%] text-center rounded-br-lg rounded-tl-lg">ID</div>
                     <div className=" m-5 mx-8 "> 
-                        <div className="flex gap-2 my-2">
+                        <div className="flex gap-3 my-2">
                             <h1 className="font-bold">Nome:</h1>
                             <p className=" font-extralight"> Joao da Silca</p>
                         </div>
-                        <div className="flex gap-2 my-2">
+                        <div className="flex gap-3 my-2">
                             <h1 className="font-bold">CPF ou CNPJ:</h1>
                             <p className=" font-extralight"> 02151515555-515 </p>
                         </div>
-                        <div className="flex gap-2 my-2">
+                        <div className="flex gap-3 my-2">
                             <h1 className="font-bold">Telefone:</h1>
                             <p className=" font-extralight"> (47) 9 9885-8514</p>
                         </div>
-                        <div className="flex gap-2 my-2">
+                        <div className="flex gap-3 my-2">
                             <h1 className="font-bold">Email:</h1>
                             <p className=" font-extralight"> blastre.21@gmagro.com</p>
                         </div>
                         <h1 className="font-bold mt-5">Endereco</h1>
-                        <div className="flex gap-2 my-2">
+                        <div className="flex gap-3 my-2">
                             <h1 className="font-bold">Rua:</h1>
                             <p className=" font-extralight"> Alguma rua , numero </p>
                         </div>
-                        <div className="flex gap-2 my-2">
+                        <div className="flex gap-3 my-2">
                             <h1 className="font-bold">Cidade:</h1>
                             <p className=" font-extralight"> Chuville</p>
                         </div>
-                        <div className="flex gap-2 my-2">
+                        <div className="flex gap-3 my-2">
                             <h1 className="font-bold">Estado:</h1>
                             <p className=" font-extralight"> NemTao Santa Catarina</p>
                         </div>
-                        <div className="flex gap-2 my-2">
+                        <div className="flex gap-3 my-2">
                             <h1 className="font-bold">CEP:</h1>
                             <p className=" font-extralight"> 000000-000 </p>
                         </div>
