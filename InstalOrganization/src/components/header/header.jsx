@@ -10,7 +10,7 @@ const Header = () => {
                 <div className="text-gray-900">
                     <ul className="flex text-center gap-4 ">
                         <Link to="/estoque" className=" hover:font-semibold hover:text-[#D06610]">Estoque</Link>
-                        <Link to="/" className=" hover:font-semibold hover:text-[#D06610]">Movimentações</Link>
+                        <Link to="/movimentacao" className=" hover:font-semibold hover:text-[#D06610]">Movimentações</Link>
                         <Link to="/clientes" className=" hover:font-semibold hover:text-[#D06610]">Clientes</Link>
                         <Link to="/pedidos" className=" hover:font-semibold hover:text-[#D06610]">Pedidos</Link>
                         <Link to="/" className=" hover:font-semibold hover:text-[#D06610]">Sair</Link>
