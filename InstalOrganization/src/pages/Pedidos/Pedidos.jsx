@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Header from '../../components/header/Header';
+import PedidosPdf from '../../Pdf/PedidosPdf/PedidosPdf';
 import Button from '../../components/button/button';
 import Input from '../../components/Input/Input';
 import { FaPencilAlt, FaTrash, FaFilePdf } from "react-icons/fa";
@@ -45,8 +46,7 @@ const Pedidos = () => {
                     <ul className="w-[50%] px-4 py-1">Posto matriz</ul>
                     <ul className="w-[25%] px-4 py-1 text-center">R$: 1.895,23</ul>
                     <ul className="w-[15%] px-4 py-1 text-center text-green-500">Aprovado</ul>
-                    {/* Balão de label (exibido apenas quando isHovered é true) */}
-                    <div className="w-[15%] px-4 py-1 gap-4 flex justify-end">
+                    <div className="w-[15%] px-4 py-1 gap-4 flex justify-end"> {/* Balão de label (exibido apenas quando isHovered é true) */}
                         <ul className="cursor-pointer relative" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}> <FaPencilAlt />
                             {isHoveredEdit && (
                                 <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-full bg-gray-500 text-white py-1 px-2 rounded-md text-sm">
@@ -54,7 +54,7 @@ const Pedidos = () => {
                                 </div>
                             )}
                         </ul>
-                        <ul className="cursor-pointer relative" onMouseEnter={handleMouseEnter1} onMouseLeave={handleMouseLeave1}> <FaFilePdf />
+                        <ul className="cursor-pointer relative" onMouseEnter={handleMouseEnter1} onMouseLeave={handleMouseLeave1} onClick={PedidosPdf}> <FaFilePdf />
                             {isHoveredPdf && (
                                 <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-full bg-gray-500 text-white py-1 px-2 rounded-md text-sm">
                                     PDF
