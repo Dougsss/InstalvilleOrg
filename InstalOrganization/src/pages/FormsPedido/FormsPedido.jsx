@@ -9,7 +9,7 @@ const FormsPedido = ({ isOpen, closeModal}) => {
         name:"",
         email:"",
         telefone:"",
-        data:"",
+        date:"",
         produto:"",
         quantidade:"",
         valor:"",
@@ -33,31 +33,24 @@ const FormsPedido = ({ isOpen, closeModal}) => {
         };
 
     return (
-        <Transition show={isOpen} as={React.Fragment}>
-            <Dialog
-                as="div"
-                className="fixed inset-0 z-10 overflow-y-auto"
-                onClose={closeModal}
-            >
-            {/* Overlay para fundo escuro quando o modal está aberto */}
-                <div className="min-h-screen px-4 text-center">
-                    <Transition.Child
-                        as={Dialog.Overlay}
-                        className="fixed inset-0 bg-black opacity-30"
-                    />
-                    {/* Conteúdo do modal */}
-                        <span
-                            className="inline-block h-screen align-middle"
-                            aria-hidden="true"
-                        >
-                        &#8203;
-                        </span>
-                    <Transition.Child
-                        as={Dialog.Content}
-                        className="inline-block w-full max-w-md p-6 my-8 overflow-hidden text-left align-middle transition-all transform bg-white shadow-xl rounded-2xl"
-                    >
-                    {/* Formulário dentro do modal */}
-                        <form onSubmit={handleSubmit}>
+        <>
+            <div className="mx-4 my-6 p-4 w-auto bg-zinc-100 shadow-xl rounded-sm">
+                <h1 className="font-semibold text-center p-2 border-solid border-b-2 border-[#494949]">Novo Pedido</h1>
+                        <form className="mt-4" onSubmit={handleSubmit}>
+                        <div className="mb-4">
+                            <label className="block text-gray-700 text-sm font-bold mb-2">
+                                Data:
+                            </label>
+                            <input
+                                type="date"
+                                name="date"
+                                placeholder="Data"
+                                value={formData.date}
+                                onChange={handleInputChange}
+                                className="w-full p-2 border border-solid border-[#D06610] rounded"
+                                required
+                            />
+                        </div>
                         <div className="mb-4">
                             <label className="block text-gray-700 text-sm font-bold mb-2">
                                 Nome:
@@ -102,11 +95,11 @@ const FormsPedido = ({ isOpen, closeModal}) => {
                         </div>
                         <div className="mb-4">
                             <label className="block text-gray-700 text-sm font-bold mb-2">
-                                Descrição do Produto:
+                                Produto:
                             </label>
                             <input
                                 type="text"
-                                name="descricao"
+                                name="produto"
                                 placeholder="Qual sera o produto?"
                                 value={formData.produto}
                                 onChange={handleInputChange}
@@ -147,7 +140,7 @@ const FormsPedido = ({ isOpen, closeModal}) => {
                                 </label>
                                 <input
                                     type="double"
-                                    name="lucro"
+                                    name="valorTotal"
                                     placeholder="Valor total dos Itens"
                                     value={formData.valorTotal}
                                     onChange={handleInputChange}
@@ -159,10 +152,8 @@ const FormsPedido = ({ isOpen, closeModal}) => {
                             <Button text="Enviar" type="submit" />
                         </div>
                         </form>
-                    </Transition.Child>
-                </div>
-            </Dialog>
-        </Transition>
+            </div>            
+        </>
     );
 };
 

@@ -51,9 +51,9 @@ const Pedidos = () => {
                     placeholder="Procure um Pedido..."
                 />
                 <Button text="Novo Pedido" onClick={openModal} />
-                {/* Vai renderizar o modal apenas quando modalOpen for true */}
-                {modalOpen && <FormsPedido isOpen={modalOpen} closeModal={closeModal} />}
             </div>
+            {/* Vai renderizar o modal apenas quando modalOpen for true */}
+            {modalOpen && <FormsPedido isOpen={modalOpen} closeModal={closeModal} />}
             <div className=" mx-4 my-6 p-2 rounded-sm w-auto h-[500px] bg-zinc-100">
                 <h1 className="font-semibold text-center p-2 border-solid border-b-2 border-[#494949]">Historico de Pedidos</h1>
                 <div className="mt-1 p-2 gap-2 bg-[#494949] w-full flex justify-between border-b-2 border-solid border-zinc-100 text-white">
