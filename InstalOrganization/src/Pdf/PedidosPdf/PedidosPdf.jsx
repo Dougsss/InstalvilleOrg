@@ -6,10 +6,35 @@ function PedidosPdf (pedidos){
 
     const reportTitle = [
         {
-            text: 'Teste para pdf',
-            fontSize: 15,
-            bold: true,
-            margin: [15,20,0,45] // left, top , right, bottom
+            alignment: 'justify',
+            columns: [
+                {
+                    //Image: 'data:logo.png',
+                },
+                [
+                    {
+                        text: 'Contato: (47) 9 9999-1687',
+                        fontSize: 9,
+                        alignment: 'center',
+                        bold: true,
+                        margin: [0,20,0,10] // left, top , right, bottom
+                    },
+                    {
+                        text: 'E-mail: comercialinstalville@gmail.com',
+                        fontSize: 9,
+                        alignment: 'center',
+                        bold: true,
+                        margin: [0,20,0,10] // left, top , right, bottom
+                    },
+                    {
+                        text: 'Responsalvel tecnico: Danilo de Oliveira',
+                        fontSize: 9,
+                        alignment: 'center',
+                        bold: true,
+                        margin: [0,20,0,10] // left, top , right, bottom
+                    }
+                ]
+            ]
         }
     ];
 

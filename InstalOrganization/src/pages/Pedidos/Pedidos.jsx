@@ -4,6 +4,7 @@ import PedidosPdf from '../../Pdf/PedidosPdf/PedidosPdf';
 import Button from '../../components/button/button';
 import Input from '../../components/Input/Input';
 import { FaPencilAlt, FaTrash, FaFilePdf } from "react-icons/fa";
+import FormsPedido from '../FormsPedido/FormsPedido';
 
 const Pedidos = () => {
     /* Estados para Label flutuante sobre os Icones */
@@ -29,6 +30,18 @@ const Pedidos = () => {
     const handleMouseLeave2 =() => {
         setIsHoveredBin(false);
     };
+    //Estado para atualizar o modal
+    const [modalOpen, setModalOpen] = useState(false);
+
+    // Função para abrir o modal
+    const openModal = () => {
+        setModalOpen(true);
+    };
+     // Função para fechar o modal
+    const closeModal = () => {
+        setModalOpen(false);
+    };
+
 
     return (
         <>
@@ -37,7 +50,9 @@ const Pedidos = () => {
                 <Input 
                     placeholder="Procure um Pedido..."
                 />
-                <Button text="Novo Pedido" />
+                <Button text="Novo Pedido" onClick={openModal} />
+                {/* Vai renderizar o modal apenas quando modalOpen for true */}
+                {modalOpen && <FormsPedido isOpen={modalOpen} closeModal={closeModal} />}
             </div>
             <div className=" mx-4 my-6 p-2 rounded-sm w-auto h-[500px] bg-zinc-100">
                 <h1 className="font-semibold text-center p-2 border-solid border-b-2 border-[#494949]">Historico de Pedidos</h1>
