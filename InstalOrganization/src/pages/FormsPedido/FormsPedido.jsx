@@ -65,33 +65,35 @@ const FormsPedido = ({ isOpen, closeModal}) => {
                                 required
                             />
                         </div>
-                        <div className="mb-4">
-                            <label className="block text-gray-700 text-sm font-bold mb-2">
-                                Email:
-                            </label>
-                            <input
-                                type="email"
-                                name="email"
-                                placeholder="exemplo123@exemplo.com"
-                                value={formData.email}
-                                onChange={handleInputChange}
-                                className="w-full p-2 border border-solid border-[#D06610] rounded"
-                                required
-                            />
-                        </div>
-                        <div className="mb-4">
-                            <label className="block text-gray-700 text-sm font-bold mb-2">
-                                Telefone:
-                            </label>
-                            <input
-                                type="string"
-                                name="telefone"
-                                placeholder="(00) 0 0000-0000"
-                                value={formData.telefone}
-                                onChange={handleInputChange}
-                                className="w-[50%] p-2 border border-solid border-[#D06610] rounded"
-                                required
-                            />
+                        <div className=" flex gap-5">
+                            <div className="mb-4 w-full">
+                                <label className="block text-gray-700 text-sm font-bold mb-2">
+                                    Email:
+                                </label>
+                                <input
+                                    type="email"
+                                    name="email"
+                                    placeholder="exemplo123@exemplo.com"
+                                    value={formData.email}
+                                    onChange={handleInputChange}
+                                    className="w-full p-2 border border-solid border-[#D06610] rounded"
+                                    required
+                                />
+                            </div>
+                            <div className="mb-4 w-full">
+                                <label className="block text-gray-700 text-sm font-bold mb-2">
+                                    Telefone:
+                                </label>
+                                <input
+                                    type="string"
+                                    name="telefone"
+                                    placeholder="(00) 0 0000-0000"
+                                    value={formData.telefone}
+                                    onChange={handleInputChange}
+                                    className="w-[50%] p-2 border border-solid border-[#D06610] rounded"
+                                    required
+                                />
+                            </div>
                         </div>
                         <div className="mb-4">
                             <label className="block text-gray-700 text-sm font-bold mb-2">
