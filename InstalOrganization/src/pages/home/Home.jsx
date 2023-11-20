@@ -1,6 +1,7 @@
 import React from 'react'
 
 import Header from '../../components/header/Header';
+import { FaBorderNone } from 'react-icons/fa';
 
 function Home() {
     return (
@@ -13,10 +14,45 @@ function Home() {
                 </div>
                 <div className="bg-zinc-300 h-[2px] mx-4 mb-5 rounded-lg"></div>
             </section>
-            <div className="grid grid-rows-6 grid-cols-3 grid-flow-row-dense gap-3 m-4 mt-8">
-                <div className="row-span-3  bg-zinc-100 rounded-md h-28 text-center">Valor de saida</div>
-                <div className="row-span-6 col-span-2 bg-zinc-100 rounded-md text-center">Estastisticas</div>
-                <div className="row-span-3  bg-zinc-100 rounded-md text-center"> Valor de entrada</div>
+            <div className=" m-4">
+                <div className=" mb-3 flex flex-row-reverse text-white">
+                    <input type="date"></input>
+                </div>
+                <div className=" flex gap-3">
+                    <div className=" bg-zinc-100 p-4 rounded-md h-28 w-full">
+                        <label className="block text-[#D06610] text-md lg:text-xl font-semibold my-2 text-center">
+                            Valor Total - Vendas:
+                        </label>
+                        <div className="text-gray-700 text-xl font-bold text-center py-2">
+                            R$: *.***,46
+                        </div>
+                    </div>
+                    <div className=" bg-zinc-100 p-4 rounded-md h-28 w-full">
+                        <label className="block text-[#D06610] text-md lg:text-xl font-semibold my-2 text-center">
+                            Custos - Vendas:
+                        </label>
+                        <div className="text-red-700 text-xl text-center py-2">
+                            R$: 8.563,23
+                        </div>
+                    </div>
+                    <div className=" bg-zinc-100 p-4 rounded-md h-28 w-full">
+                        <label className="block text-[#D06610] text-md lg:text-xl font-semibold my-2 text-center">
+                            Lucro - Vendas:
+                        </label>
+                        <div className="text-green-700 text-xl text-center py-2">
+                            R$: 1.867,23
+                        </div>
+                    </div>
+                    <div className=" bg-zinc-100 p-4 rounded-md h-28 w-full">
+                        <label className="block text-[#D06610] text-md lg:text-xl font-semibold my-2 text-center">
+                            Produtos Vendidos:
+                        </label>
+                        <div className="text-gray-700 text-xl text-center py-2">
+                            153
+                        </div>
+                    </div>
+                </div>    
+                <div className="bg-zinc-100 rounded-md text-center mt-8">Estastisticas</div>
             </div>
         </>
     )
