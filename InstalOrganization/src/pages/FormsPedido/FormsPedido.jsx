@@ -14,6 +14,7 @@ const FormsPedido = ({ isOpen, closeModal}) => {
         quantidade:"",
         valor:"",
         valorTotal:"",
+        status:"",
     });
     // Função para lidar com mudanças nos campos do formulário
     const handleInputChange = (e) => {
@@ -136,11 +137,24 @@ const FormsPedido = ({ isOpen, closeModal}) => {
                                     onChange={handleInputChange}
                                     className="w-full p-2 border border-solid border-[#D06610] rounded"
                                 />
-                            </div>
+                            </div>  
                         </div>
+                        <div className="mb-4  w-[30%]">
+                            <label className="block text-gray-700 text-sm font-bold mb-2">
+                                Status:
+                            </label>
+                            <input
+                                type="string"
+                                name="status"
+                                placeholder="Aprovado/Analise/Cancelado"
+                                value={formData.status}
+                                onChange={handleInputChange}
+                                className="w-full p-2 border border-solid border-[#D06610] rounded"
+                            />
+                        </div> 
                         <div className="flex flex-row-reverse">
-                            <button className="bg-red-700 text-white p-2 rounded mx-1" onClick={closeModal}>Cancelar</button>
-                            <button className="bg-green-700 text-white p-2 rounded mx-1" type="submit">Adidcionar</button>
+                            <button className="bg-red-700 hover:bg-red-900 text-white p-2 rounded mx-1" onClick={closeModal}>Cancelar</button>
+                            <button className="bg-green-700 hover:bg-green-900 text-white p-2 rounded mx-1" type="submit">Adidcionar</button>
                         </div>
                         </form>
             </div>            
