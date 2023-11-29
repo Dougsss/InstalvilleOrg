@@ -32,6 +32,16 @@ const FormsPedido = ({ isOpen, closeModal}) => {
             // Feche o modal após enviar o formulário
             closeModal();
         };
+    // Função para adicionar os itens 
+    const [product, setProduct] = useState ([]);
+    const [productName, setProductName] = useState ('');
+    
+    const addProduct = () => {
+        if (productName.trim() !== '') {
+            setProducts([...products, productName]);
+            setProductName('');
+        }
+    };
 
     return (
         <>
@@ -96,6 +106,20 @@ const FormsPedido = ({ isOpen, closeModal}) => {
                                 />
                             </div>
                         </div>
+                        <div className="mb-4  w-[30%]">
+                            <label className="block text-gray-700 text-sm font-bold mb-2">
+                                Status:
+                            </label>
+                            <input
+                                type="string"
+                                name="status"
+                                placeholder="Aprovado/Analise/Cancelado"
+                                value={formData.status}
+                                onChange={handleInputChange}
+                                className="w-full p-2 border border-solid border-[#D06610] rounded"
+                            />
+                        </div>
+                        <button className="bg-[#D06610] hover:bg-orange-400 text-white hover:text-black p-2 rounded mx-1" onClick={addProduct}> + </button>
                         {/* produtos */}
                         <div className="mb-4 w-[50%]">
                             <label className="block text-gray-700 text-sm font-bold mb-2">
@@ -103,10 +127,10 @@ const FormsPedido = ({ isOpen, closeModal}) => {
                             </label>
                             <input
                                 type="text"
-                                name="produto"
+                                name="productName"
                                 placeholder="Qual sera o produto?"
-                                value={formData.produto}
-                                onChange={handleInputChange}
+                                value={productName}
+                                onChange={(e) => setProductName(e.target.value)}
                                 className="w-full p-2 border border-solid border-[#D06610] rounded"
                                 required
                             />
@@ -138,20 +162,15 @@ const FormsPedido = ({ isOpen, closeModal}) => {
                                     className="w-full p-2 border border-solid border-[#D06610] rounded"
                                 />
                             </div>  
-                        </div>
-                        <div className="mb-4  w-[30%]">
-                            <label className="block text-gray-700 text-sm font-bold mb-2">
-                                Status:
-                            </label>
-                            <input
-                                type="string"
-                                name="status"
-                                placeholder="Aprovado/Analise/Cancelado"
-                                value={formData.status}
-                                onChange={handleInputChange}
-                                className="w-full p-2 border border-solid border-[#D06610] rounded"
-                            />
                         </div> 
+                        <div>
+                            <h2 className="text-lg font-bold mb-2">Produtos Adicionados:</h2>
+                            {/* <ul>
+                                {products.map((product, index) => (
+                                <li key={index} className="mb-2">{product}</li>
+                                ))}
+                            </ul> */}
+                        </div>
                         <div className="flex flex-row-reverse">
                             <button className="bg-red-700 hover:bg-red-900 text-white p-2 rounded mx-1" onClick={closeModal}>Cancelar</button>
                             <button className="bg-green-700 hover:bg-green-900 text-white p-2 rounded mx-1" type="submit">Adidcionar</button>
